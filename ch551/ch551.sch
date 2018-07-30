@@ -1,0 +1,404 @@
+EESchema Schematic File Version 4
+LIBS:ch551-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L conn:USB_OTG J1
+U 1 1 5B1D4895
+P 1800 1700
+F 0 "J1" H 1600 2150 50  0000 L CNN
+F 1 "USB_OTG" H 1600 2050 50  0000 L CNN
+F 2 "Connectors:USB_Micro-B" H 1950 1650 50  0001 C CNN
+F 3 "" H 1950 1650 50  0001 C CNN
+	1    1800 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VBUS #PWR3
+U 1 1 5B1D4920
+P 2300 1150
+F 0 "#PWR3" H 2300 1000 50  0001 C CNN
+F 1 "VBUS" H 2300 1300 50  0000 C CNN
+F 2 "" H 2300 1150 50  0001 C CNN
+F 3 "" H 2300 1150 50  0001 C CNN
+	1    2300 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR1
+U 1 1 5B1D4936
+P 1800 2450
+F 0 "#PWR1" H 1800 2200 50  0001 C CNN
+F 1 "GND" H 1800 2300 50  0000 C CNN
+F 2 "" H 1800 2450 50  0001 C CNN
+F 3 "" H 1800 2450 50  0001 C CNN
+	1    1800 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L regul:LM1117-3.3 U1
+U 1 1 5B1D4972
+P 2950 1200
+F 0 "U1" H 2800 1325 50  0000 C CNN
+F 1 "LM1117-3.3" H 2950 1325 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-223" H 2950 1200 50  0001 C CNN
+F 3 "" H 2950 1200 50  0001 C CNN
+	1    2950 1200
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C_Small C1
+U 1 1 5B1D49ED
+P 2500 1450
+F 0 "C1" H 2510 1520 50  0000 L CNN
+F 1 "10μF" H 2510 1370 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 2500 1450 50  0001 C CNN
+F 3 "" H 2500 1450 50  0001 C CNN
+	1    2500 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L device:C_Small C3
+U 1 1 5B1D4A41
+P 3300 1450
+F 0 "C3" H 3310 1520 50  0000 L CNN
+F 1 "10μF" H 3310 1370 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 3300 1450 50  0001 C CNN
+F 3 "" H 3300 1450 50  0001 C CNN
+	1    3300 1450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR6
+U 1 1 5B1D4B61
+P 3600 1150
+F 0 "#PWR6" H 3600 1000 50  0001 C CNN
+F 1 "+3.3V" H 3600 1290 50  0000 C CNN
+F 2 "" H 3600 1150 50  0001 C CNN
+F 3 "" H 3600 1150 50  0001 C CNN
+	1    3600 1150
+	1    0    0    -1  
+$EndComp
+$Comp
+L wch:CH551G U2
+U 1 1 5B1D4BAE
+P 5650 1800
+F 0 "U2" H 7250 1850 60  0000 C CNN
+F 1 "CH551G" H 7100 1950 60  0000 C CNN
+F 2 "Housings_SOIC:SOIC-16_3.9x9.9mm_Pitch1.27mm" H 5650 1800 60  0001 C CNN
+F 3 "" H 5650 1800 60  0001 C CNN
+	1    5650 1800
+	-1   0    0    -1  
+$EndComp
+$Comp
+L device:C_Small C4
+U 1 1 5B1D50DB
+P 4850 1300
+F 0 "C4" H 4860 1370 50  0000 L CNN
+F 1 "0.1μF" H 4860 1220 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0603_HandSoldering" H 4850 1300 50  0001 C CNN
+F 3 "" H 4850 1300 50  0001 C CNN
+	1    4850 1300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 1500 2100 1500
+Wire Wire Line
+	2300 1150 2300 1200
+Wire Wire Line
+	1700 2100 1700 2450
+Wire Wire Line
+	1800 2450 1800 2100
+Wire Wire Line
+	2100 2450 2100 1900
+Connection ~ 1800 2450
+Wire Wire Line
+	2300 1200 2500 1200
+Connection ~ 2300 1200
+Wire Wire Line
+	2500 1350 2500 1200
+Connection ~ 2500 1200
+Wire Wire Line
+	2950 2450 2950 1600
+Connection ~ 2100 2450
+Wire Wire Line
+	2500 1550 2500 1600
+Wire Wire Line
+	2500 1600 2950 1600
+Connection ~ 2950 1600
+Wire Wire Line
+	3300 1600 3300 1550
+Wire Wire Line
+	3250 1200 3300 1200
+Wire Wire Line
+	3600 1200 3600 1150
+Wire Wire Line
+	3300 1350 3300 1200
+Connection ~ 3300 1200
+Wire Wire Line
+	1700 2450 1800 2450
+Wire Wire Line
+	3350 2050 3350 2450
+Wire Wire Line
+	3350 2050 3800 2050
+Connection ~ 2950 2450
+Wire Wire Line
+	3800 2150 3400 2150
+Wire Wire Line
+	3400 2150 3400 2500
+Wire Wire Line
+	3400 2500 2450 2500
+Wire Wire Line
+	2450 2500 2450 1800
+Wire Wire Line
+	2450 1800 2100 1800
+Wire Wire Line
+	3450 2250 3500 2250
+Wire Wire Line
+	3450 2250 3450 2400
+Wire Wire Line
+	3450 2400 2150 2400
+Wire Wire Line
+	2150 2400 2150 1700
+Wire Wire Line
+	2150 1700 2100 1700
+Text Label 2150 1700 0    60   ~ 0
+D+
+Text Label 2450 1800 0    60   ~ 0
+D-
+Text Notes 2100 2950 0    60   ~ 0
+Note:\nC1, C3 near LM1117,\nC4 near CH551G
+$Comp
+L conn:Conn_01x08 J2
+U 1 1 5B1D7657
+P 3500 3550
+F 0 "J2" H 3500 3950 50  0000 C CNN
+F 1 "Conn_01x08" H 3500 3050 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 3500 3550 50  0001 C CNN
+F 3 "" H 3500 3550 50  0001 C CNN
+	1    3500 3550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 2550 3800 3350
+Wire Wire Line
+	3800 2450 3700 2450
+Wire Wire Line
+	3700 2450 3700 3350
+Wire Wire Line
+	3800 2350 3600 2350
+Wire Wire Line
+	3600 2350 3600 3350
+Wire Wire Line
+	3500 2250 3500 3250
+Connection ~ 3500 2250
+Connection ~ 3400 2500
+Wire Wire Line
+	3350 3350 3300 3350
+Connection ~ 3350 2450
+$Comp
+L conn:Conn_01x08 J3
+U 1 1 5B1DE4B0
+P 6400 2150
+F 0 "J3" H 6400 2550 50  0000 C CNN
+F 1 "Conn_01x08" H 6400 1650 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x08_Pitch2.54mm" H 6400 2150 50  0001 C CNN
+F 3 "" H 6400 2150 50  0001 C CNN
+	1    6400 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5850 1850 6200 1850
+Wire Wire Line
+	5850 1950 6200 1950
+Wire Wire Line
+	5850 2050 6200 2050
+Wire Wire Line
+	5850 2150 6200 2150
+Wire Wire Line
+	5850 2250 6200 2250
+Wire Wire Line
+	5850 2350 6200 2350
+Wire Wire Line
+	6200 2450 5850 2450
+Wire Wire Line
+	5850 2550 6200 2550
+$Comp
+L device:R_Small R1
+U 1 1 5B1DEA2D
+P 2050 3250
+F 0 "R1" H 2080 3270 50  0000 L CNN
+F 1 "10K" H 2080 3210 50  0000 L CNN
+F 2 "Resistors_SMD:R_0603_HandSoldering" H 2050 3250 50  0001 C CNN
+F 3 "" H 2050 3250 50  0001 C CNN
+	1    2050 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2150 3250 2500 3250
+Wire Wire Line
+	2600 3250 3500 3250
+Connection ~ 3500 3250
+$Comp
+L power:+3.3V #PWR8
+U 1 1 5B1DF18C
+P 4150 850
+F 0 "#PWR8" H 4150 700 50  0001 C CNN
+F 1 "+3.3V" H 4150 990 50  0000 C CNN
+F 2 "" H 4150 850 50  0001 C CNN
+F 3 "" H 4150 850 50  0001 C CNN
+	1    4150 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR9
+U 1 1 5B1DF423
+P 4500 750
+F 0 "#PWR9" H 4500 600 50  0001 C CNN
+F 1 "VCC" H 4500 900 50  0000 C CNN
+F 2 "" H 4500 750 50  0001 C CNN
+F 3 "" H 4500 750 50  0001 C CNN
+	1    4500 750 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR10
+U 1 1 5B1DF569
+P 4500 1550
+F 0 "#PWR10" H 4500 1300 50  0001 C CNN
+F 1 "GND" H 4500 1400 50  0000 C CNN
+F 2 "" H 4500 1550 50  0001 C CNN
+F 3 "" H 4500 1550 50  0001 C CNN
+	1    4500 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 1400 4850 1550
+$Comp
+L power:+3.3V #PWR7
+U 1 1 5B1DF6F7
+P 3750 1750
+F 0 "#PWR7" H 3750 1600 50  0001 C CNN
+F 1 "+3.3V" H 3750 1890 50  0000 C CNN
+F 2 "" H 3750 1750 50  0001 C CNN
+F 3 "" H 3750 1750 50  0001 C CNN
+	1    3750 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR5
+U 1 1 5B1DF723
+P 3550 1750
+F 0 "#PWR5" H 3550 1600 50  0001 C CNN
+F 1 "VCC" H 3550 1900 50  0000 C CNN
+F 2 "" H 3550 1750 50  0001 C CNN
+F 3 "" H 3550 1750 50  0001 C CNN
+	1    3550 1750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 1750 3750 1850
+Wire Wire Line
+	3750 1850 3800 1850
+Wire Wire Line
+	3800 1950 3550 1950
+Wire Wire Line
+	3550 1950 3550 1750
+Wire Wire Line
+	3100 3350 3100 3050
+Wire Wire Line
+	3100 3050 1850 3050
+Wire Wire Line
+	1850 3000 1850 3050
+Wire Wire Line
+	1850 3250 1950 3250
+$Comp
+L power:+3.3V #PWR2
+U 1 1 5B1DF96A
+P 1850 3000
+F 0 "#PWR2" H 1850 2850 50  0001 C CNN
+F 1 "+3.3V" H 1850 3140 50  0000 C CNN
+F 2 "" H 1850 3000 50  0001 C CNN
+F 3 "" H 1850 3000 50  0001 C CNN
+	1    1850 3000
+	1    0    0    -1  
+$EndComp
+Connection ~ 1850 3050
+$Comp
+L power:VCC #PWR4
+U 1 1 5B1DF9EF
+P 3200 3050
+F 0 "#PWR4" H 3200 2900 50  0001 C CNN
+F 1 "VCC" H 3200 3200 50  0000 C CNN
+F 2 "" H 3200 3050 50  0001 C CNN
+F 3 "" H 3200 3050 50  0001 C CNN
+	1    3200 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3200 3050 3200 3350
+Wire Wire Line
+	4850 1550 4500 1550
+Wire Wire Line
+	4150 1200 4500 1200
+$Comp
+L conn:Conn_01x02 J4
+U 1 1 5B43644B
+P 2600 3650
+F 0 "J4" H 2600 3750 50  0000 C CNN
+F 1 "Conn_01x02" H 2600 3450 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02_Pitch2.54mm" H 2600 3650 50  0001 C CNN
+F 3 "" H 2600 3650 50  0001 C CNN
+	1    2600 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	2500 3250 2500 3450
+Wire Wire Line
+	2600 3250 2600 3450
+Wire Wire Line
+	4150 850  4150 1200
+Wire Wire Line
+	4500 750  4500 1200
+Connection ~ 4500 1200
+Wire Wire Line
+	1800 2450 2100 2450
+Wire Wire Line
+	2300 1200 2300 1500
+Wire Wire Line
+	2500 1200 2650 1200
+Wire Wire Line
+	2100 2450 2950 2450
+Wire Wire Line
+	2950 1600 2950 1500
+Wire Wire Line
+	2950 1600 3300 1600
+Wire Wire Line
+	3300 1200 3600 1200
+Wire Wire Line
+	2950 2450 3350 2450
+Wire Wire Line
+	3500 2250 3800 2250
+Wire Wire Line
+	3400 2500 3400 3350
+Wire Wire Line
+	3350 2450 3350 3350
+Wire Wire Line
+	3500 3250 3500 3350
+Wire Wire Line
+	1850 3050 1850 3250
+Wire Wire Line
+	4500 1200 4850 1200
+$EndSCHEMATC
