@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name pine64)(type Legacy)(uri ${KIPRJMOD}/../libs/pine64.lib)(options "")(descr ""))
+  (lib (name wch)(type Legacy)(uri ${KIPRJMOD}/../libs/wch.lib)(options "")(descr ""))
+)
