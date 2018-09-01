@@ -2,7 +2,7 @@
 
   (general
     (thickness 1)
-    (drawings 17)
+    (drawings 19)
     (tracks 124)
     (zones 0)
     (modules 17)
@@ -784,7 +784,7 @@
     (fp_text reference R4 (at 2.159 0.127) (layer F.SilkS)
       (effects (font (size 0.5 0.5) (thickness 0.125)))
     )
-    (fp_text value 10kR (at 0 1.43) (layer F.Fab)
+    (fp_text value 4.7kR (at 0 1.43) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_line (start -0.8 0.4) (end -0.8 -0.4) (layer F.Fab) (width 0.1))
@@ -847,6 +847,12 @@
     )
   )
 
+  (gr_text 3V3 (at 150.622 84.074) (layer B.SilkS)
+    (effects (font (size 0.85 0.85) (thickness 0.2125)) (justify mirror))
+  )
+  (gr_text 5V (at 150.876 89.281) (layer B.SilkS)
+    (effects (font (size 0.85 0.85) (thickness 0.2125)) (justify mirror))
+  )
   (gr_text GND (at 149.352 81.407) (layer F.SilkS)
     (effects (font (size 0.65 0.65) (thickness 0.1625)))
   )
