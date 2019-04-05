@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name JLCSMT_Packages)(type KiCad)(uri ${KIPRJMOD}/../packages/JLCSMT_Packages.pretty)(options "")(descr ""))
+)

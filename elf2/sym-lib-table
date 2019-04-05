@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name FPGA_Anlogic)(type Legacy)(uri ${KIPRJMOD}/../libs/FPGA_Anlogic.lib)(options "")(descr ""))
+)

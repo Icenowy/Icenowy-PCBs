@@ -1,0 +1,9 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP EF2M45LG48
+D Anlogic ELF2 FPGA, 4480 LUTs, 1.2V with internal LDO, with Cortex-M3, LQFP-48
+K FPGA programmable logic
+F http://www.anlogic.com/prod_view.aspx?TypeId=12&Id=170&FId=t3:12:3
+$ENDCMP
+#
+#End Doc Library
