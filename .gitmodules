@@ -1,3 +1,6 @@
 [submodule "adafruit-libs"]
 	path = adafruit-libs
 	url = https://github.com/adafruit/kicad-libs
+[submodule "3340_kicad"]
+	path = 3340_kicad
+	url = https://github.com/thirtythreeforty/3340_kicad.git
