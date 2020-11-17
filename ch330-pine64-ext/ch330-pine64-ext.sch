@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:ch330-pine64-ext-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -26,7 +25,7 @@ F 3 "" H 1450 2250 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L Icenowy_Regulator_Linear:XC6206 U2
+L Regulator_Linear:XC6206PxxxMR U2
 U 1 1 5B1CAB58
 P 2300 1000
 F 0 "U2" H 2150 1125 50  0000 C CNN
@@ -171,14 +170,9 @@ Wire Wire Line
 	1650 1200 1550 1200
 Wire Wire Line
 	1550 1200 1550 900 
-Wire Wire Line
-	1650 1300 2300 1300
 Connection ~ 1550 900 
 Wire Wire Line
 	1550 900  1600 900 
-Wire Wire Line
-	2800 1300 2300 1300
-Connection ~ 2300 1300
 Wire Wire Line
 	3050 1650 3050 1950
 Wire Wire Line
@@ -416,4 +410,6 @@ Wire Wire Line
 Connection ~ 3250 1150
 Wire Wire Line
 	3250 1150 3500 1150
+Wire Wire Line
+	1650 1300 2800 1300
 $EndSCHEMATC

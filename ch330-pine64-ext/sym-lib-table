@@ -1,4 +1,4 @@
 (sym_lib_table
-  (lib (name pine64)(type Legacy)(uri /home/icenowy/kicad/ch330-pine64-ext/pine64.lib)(options "")(descr ""))
-  (lib (name wch)(type Legacy)(uri /home/icenowy/kicad/ch330-pine64-ext/wch.lib)(options "")(descr ""))
+  (lib (name pine64)(type Legacy)(uri ${KIPRJMOD}/../libs/pine64.lib)(options "")(descr ""))
+  (lib (name wch)(type Legacy)(uri ${KIPRJMOD}/../libs/wch.lib)(options "")(descr ""))
 )
