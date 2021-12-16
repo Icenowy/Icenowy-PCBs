@@ -1,6 +1,5 @@
 EESchema Schematic File Version 4
-LIBS:elf2-cache
-EELAYER 26 0
+EELAYER 30 0
 EELAYER END
 $Descr A4 11693 8268
 encoding utf-8
@@ -805,17 +804,6 @@ Text Label 2900 3350 3    50   ~ 0
 UPU
 Wire Wire Line
 	2900 3500 2900 3350
-$Comp
-L Device:Crystal_GND24 Y1
-U 1 1 5C8A0854
-P 9050 4800
-F 0 "Y1" V 9150 4550 50  0000 L CNN
-F 1 "25MHz 12pF" V 9250 4550 50  0000 L CNN
-F 2 "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm" H 9050 4800 50  0001 C CNN
-F 3 "~" H 9050 4800 50  0001 C CNN
-	1    9050 4800
-	0    1    1    0   
-$EndComp
 Wire Wire Line
 	9500 4750 9500 4650
 Wire Wire Line
@@ -848,7 +836,6 @@ F 3 "~" H 9450 5150 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	9050 4950 9050 5050
-Connection ~ 9050 4950
 Wire Wire Line
 	9450 4650 9450 5050
 Connection ~ 9450 4650
@@ -872,8 +859,6 @@ Wire Wire Line
 	9050 5350 9250 5350
 Wire Wire Line
 	9450 5350 9450 5250
-Wire Wire Line
-	9250 5350 9350 5350
 Text Label 2850 4100 3    50   ~ 0
 PORT_D-
 Text Label 2900 3750 0    50   ~ 0
@@ -892,7 +877,7 @@ U 1 1 5C8501B4
 P 7800 4450
 F 0 "SW1" H 7800 4735 50  0000 C CNN
 F 1 "RESET" H 7800 4644 50  0000 C CNN
-F 2 "Button_Switch_SMD:SW_SPST_TL3342" H 7800 4650 50  0001 C CNN
+F 2 "Button_Switch_SMD:SW_SPST_FSMSM" H 7800 4650 50  0001 C CNN
 F 3 "" H 7800 4650 50  0001 C CNN
 	1    7800 4450
 	1    0    0    -1  
@@ -972,85 +957,6 @@ Text Label 3700 1900 0    50   ~ 0
 UPU
 Wire Wire Line
 	3700 1900 3850 1900
-Text Label 3700 2300 0    50   ~ 0
-SCL
-Text Label 3700 2400 0    50   ~ 0
-SDA
-Wire Wire Line
-	3700 2300 3850 2300
-Wire Wire Line
-	3700 2400 3850 2400
-$Comp
-L Connector_Generic:Conn_02x04_Odd_Even J4
-U 1 1 5C88E069
-P 1000 6450
-F 0 "J4" H 1050 6767 50  0000 C CNN
-F 1 "PMOD_I2C" H 1050 6676 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Horizontal" H 1000 6450 50  0001 C CNN
-F 3 "~" H 1000 6450 50  0001 C CNN
-	1    1000 6450
-	1    0    0    -1  
-$EndComp
-Text Label 650  6350 0    50   ~ 0
-SCL
-Text Label 1450 6350 2    50   ~ 0
-SCL
-Text Label 1450 6450 2    50   ~ 0
-SDA
-Text Label 650  6450 0    50   ~ 0
-SDA
-Wire Wire Line
-	650  6450 800  6450
-Wire Wire Line
-	650  6350 800  6350
-Wire Wire Line
-	1300 6350 1450 6350
-Wire Wire Line
-	1300 6450 1450 6450
-$Comp
-L power:GND #PWR0127
-U 1 1 5C8A04BB
-P 1300 6550
-F 0 "#PWR0127" H 1300 6300 50  0001 C CNN
-F 1 "GND" V 1305 6422 50  0000 R CNN
-F 2 "" H 1300 6550 50  0001 C CNN
-F 3 "" H 1300 6550 50  0001 C CNN
-	1    1300 6550
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:GND #PWR0128
-U 1 1 5C8A05A9
-P 800 6550
-F 0 "#PWR0128" H 800 6300 50  0001 C CNN
-F 1 "GND" V 805 6422 50  0000 R CNN
-F 2 "" H 800 6550 50  0001 C CNN
-F 3 "" H 800 6550 50  0001 C CNN
-	1    800  6550
-	0    1    1    0   
-$EndComp
-$Comp
-L power:+3V3 #PWR0129
-U 1 1 5C8A071A
-P 800 6650
-F 0 "#PWR0129" H 800 6500 50  0001 C CNN
-F 1 "+3V3" V 815 6778 50  0000 L CNN
-F 2 "" H 800 6650 50  0001 C CNN
-F 3 "" H 800 6650 50  0001 C CNN
-	1    800  6650
-	0    -1   -1   0   
-$EndComp
-$Comp
-L power:+3V3 #PWR0130
-U 1 1 5C8A0808
-P 1300 6650
-F 0 "#PWR0130" H 1300 6500 50  0001 C CNN
-F 1 "+3V3" V 1315 6778 50  0000 L CNN
-F 2 "" H 1300 6650 50  0001 C CNN
-F 3 "" H 1300 6650 50  0001 C CNN
-	1    1300 6650
-	0    1    1    0   
-$EndComp
 Text Label 5500 2000 0    50   ~ 0
 PMOD_6P_1
 Text Label 5500 2100 0    50   ~ 0
@@ -1067,59 +973,48 @@ Wire Wire Line
 	5500 2200 5900 2200
 Wire Wire Line
 	5500 2300 5900 2300
-$Comp
-L Connector:Conn_01x06_Female J5
-U 1 1 5C8B49E9
-P 2500 5700
-F 0 "J5" V 2440 5312 50  0000 R CNN
-F 1 "PMOD_6P" V 2349 5312 50  0000 R CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Horizontal" H 2500 5700 50  0001 C CNN
-F 3 "~" H 2500 5700 50  0001 C CNN
-	1    2500 5700
-	1    0    0    -1  
-$EndComp
-Text Label 1850 5500 0    50   ~ 0
+Text Label 750  6800 0    50   ~ 0
 PMOD_6P_1
-Text Label 1850 5600 0    50   ~ 0
+Text Label 750  6900 0    50   ~ 0
 PMOD_6P_2
-Text Label 1850 5700 0    50   ~ 0
+Text Label 750  7000 0    50   ~ 0
 PMOD_6P_3
-Text Label 1850 5800 0    50   ~ 0
+Text Label 750  7100 0    50   ~ 0
 PMOD_6P_4
 Wire Wire Line
-	2300 5500 1850 5500
+	1200 6800 750  6800
 Wire Wire Line
-	2300 5600 1850 5600
+	1200 6900 750  6900
 Wire Wire Line
-	2300 5700 1850 5700
+	1200 7000 750  7000
 Wire Wire Line
-	2300 5800 1850 5800
+	1200 7100 750  7100
 $Comp
 L power:GND #PWR0131
 U 1 1 5C8CDC9F
-P 2050 5900
-F 0 "#PWR0131" H 2050 5650 50  0001 C CNN
-F 1 "GND" H 2050 5750 50  0000 C CNN
-F 2 "" H 2050 5900 50  0001 C CNN
-F 3 "" H 2050 5900 50  0001 C CNN
-	1    2050 5900
+P 950 7200
+F 0 "#PWR0131" H 950 6950 50  0001 C CNN
+F 1 "GND" H 950 7050 50  0000 C CNN
+F 2 "" H 950 7200 50  0001 C CNN
+F 3 "" H 950 7200 50  0001 C CNN
+	1    950  7200
 	0    1    1    0   
 $EndComp
 $Comp
 L power:+3V3 #PWR0132
 U 1 1 5C8CDD9A
-P 2050 6000
-F 0 "#PWR0132" H 2050 5850 50  0001 C CNN
-F 1 "+3V3" H 1950 6150 50  0000 C CNN
-F 2 "" H 2050 6000 50  0001 C CNN
-F 3 "" H 2050 6000 50  0001 C CNN
-	1    2050 6000
+P 950 7300
+F 0 "#PWR0132" H 950 7150 50  0001 C CNN
+F 1 "+3V3" H 850 7450 50  0000 C CNN
+F 2 "" H 950 7300 50  0001 C CNN
+F 3 "" H 950 7300 50  0001 C CNN
+	1    950  7300
 	0    -1   -1   0   
 $EndComp
 Wire Wire Line
-	2050 5900 2300 5900
+	950  7200 1200 7200
 Wire Wire Line
-	2050 6000 2300 6000
+	950  7300 1200 7300
 Text Label 7450 2650 0    50   ~ 0
 SWCLK
 Text Label 7450 2800 0    50   ~ 0
@@ -1128,46 +1023,35 @@ Wire Wire Line
 	7450 2650 7700 2650
 Wire Wire Line
 	7450 2800 7700 2800
-$Comp
-L Connector:Conn_01x06_Female J6
-U 1 1 5C91CBE8
-P 2500 6750
-F 0 "J6" V 2440 6362 50  0000 R CNN
-F 1 "PMOD_6P2" V 2349 6362 50  0000 R CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Horizontal" H 2500 6750 50  0001 C CNN
-F 3 "~" H 2500 6750 50  0001 C CNN
-	1    2500 6750
-	1    0    0    -1  
-$EndComp
-Text Label 1800 6550 0    50   ~ 0
+Text Label 2200 6800 2    50   ~ 0
 PMOD_6P2_1
-Text Label 1800 6650 0    50   ~ 0
+Text Label 2200 6900 2    50   ~ 0
 PMOD_6P2_2
-Text Label 1800 6750 0    50   ~ 0
+Text Label 2200 7000 2    50   ~ 0
 PMOD_6P2_3
-Text Label 1800 6850 0    50   ~ 0
+Text Label 2200 7100 2    50   ~ 0
 PMOD_6P2_4
 $Comp
 L power:GND #PWR0133
 U 1 1 5C91CBF6
-P 2000 6950
-F 0 "#PWR0133" H 2000 6700 50  0001 C CNN
-F 1 "GND" H 2000 6800 50  0000 C CNN
-F 2 "" H 2000 6950 50  0001 C CNN
-F 3 "" H 2000 6950 50  0001 C CNN
-	1    2000 6950
-	0    1    1    0   
+P 2000 7200
+F 0 "#PWR0133" H 2000 6950 50  0001 C CNN
+F 1 "GND" H 2000 7050 50  0000 C CNN
+F 2 "" H 2000 7200 50  0001 C CNN
+F 3 "" H 2000 7200 50  0001 C CNN
+	1    2000 7200
+	0    -1   1    0   
 $EndComp
 $Comp
 L power:+3V3 #PWR0134
 U 1 1 5C91CBFC
-P 2000 7050
-F 0 "#PWR0134" H 2000 6900 50  0001 C CNN
-F 1 "+3V3" H 1900 7200 50  0000 C CNN
-F 2 "" H 2000 7050 50  0001 C CNN
-F 3 "" H 2000 7050 50  0001 C CNN
-	1    2000 7050
-	0    -1   -1   0   
+P 2000 7300
+F 0 "#PWR0134" H 2000 7150 50  0001 C CNN
+F 1 "+3V3" H 1900 7450 50  0000 C CNN
+F 2 "" H 2000 7300 50  0001 C CNN
+F 3 "" H 2000 7300 50  0001 C CNN
+	1    2000 7300
+	0    1    -1   0   
 $EndComp
 Text Label 7250 1800 0    50   ~ 0
 PMOD_6P2_1
@@ -1230,16 +1114,14 @@ Wire Wire Line
 	900  5900 1100 5900
 Text Label 3650 2000 0    50   ~ 0
 LED_R
-Text Label 3650 2100 0    50   ~ 0
-LED_G
 Text Label 3650 2200 0    50   ~ 0
+LED_G
+Text Label 3650 2400 0    50   ~ 0
 LED_B
 Wire Wire Line
 	3650 2000 3850 2000
 Wire Wire Line
 	3650 2100 3850 2100
-Wire Wire Line
-	3650 2200 3850 2200
 $Comp
 L Device:LED D3
 U 1 1 5C97AB3F
@@ -1367,20 +1249,6 @@ Wire Notes Line width 20 style solid
 	400  4900 8750 4900
 Text Notes 500  5200 0    200  ~ 40
 Connectors
-Wire Wire Line
-	8850 4800 8850 4450
-Wire Wire Line
-	9250 4800 9350 4800
-Wire Wire Line
-	9350 4800 9350 5350
-Connection ~ 9350 5350
-Wire Wire Line
-	9350 5350 9450 5350
-Wire Wire Line
-	9350 4450 9350 4800
-Wire Wire Line
-	8850 4450 9350 4450
-Connection ~ 9350 4800
 Text Label 1250 2550 0    50   ~ 0
 LVDSRX_P
 Text Label 1250 2450 0    50   ~ 0
@@ -1408,63 +1276,63 @@ Wire Wire Line
 $Comp
 L Connector:Conn_01x07_Male J8
 U 1 1 5CB4A8DF
-P 600 7300
-F 0 "J8" H 706 7778 50  0000 C CNN
-F 1 "ADC_LVDS" H 706 7687 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 600 7300 50  0001 C CNN
-F 3 "~" H 600 7300 50  0001 C CNN
-	1    600  7300
+P 1650 5800
+F 0 "J8" H 1756 6278 50  0000 C CNN
+F 1 "ADC_LVDS" H 1756 6187 50  0000 C CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical" H 1650 5800 50  0001 C CNN
+F 3 "~" H 1650 5800 50  0001 C CNN
+	1    1650 5800
 	1    0    0    -1  
 $EndComp
-Text Label 1200 7000 2    50   ~ 0
+Text Label 2250 5500 2    50   ~ 0
 ADC_0
-Text Label 1200 7200 2    50   ~ 0
+Text Label 2250 5700 2    50   ~ 0
 LVDSRX_P
-Text Label 1200 7100 2    50   ~ 0
+Text Label 2250 5600 2    50   ~ 0
 LVDSRX_N
-Text Label 1200 7300 2    50   ~ 0
+Text Label 2250 5800 2    50   ~ 0
 LVDSTX_N
-Text Label 1200 7400 2    50   ~ 0
+Text Label 2250 5900 2    50   ~ 0
 LVDSTX_P
 Wire Wire Line
-	800  7000 1200 7000
+	1850 5500 2250 5500
 Wire Wire Line
-	800  7100 1200 7100
+	1850 5600 2250 5600
 Wire Wire Line
-	800  7200 1200 7200
+	1850 5700 2250 5700
 Wire Wire Line
-	800  7300 1200 7300
+	1850 5800 2250 5800
 Wire Wire Line
-	800  7400 1200 7400
-Text Label 1200 7500 2    50   ~ 0
+	1850 5900 2250 5900
+Text Label 2250 6000 2    50   ~ 0
 ADC_REF
 Wire Wire Line
-	800  7500 1200 7500
+	1850 6000 2250 6000
 $Comp
 L power:+3V3 #PWR0138
 U 1 1 5CB8C2A8
-P 1100 7600
-F 0 "#PWR0138" H 1100 7450 50  0001 C CNN
-F 1 "+3V3" V 1115 7728 50  0000 L CNN
-F 2 "" H 1100 7600 50  0001 C CNN
-F 3 "" H 1100 7600 50  0001 C CNN
-	1    1100 7600
+P 2150 6100
+F 0 "#PWR0138" H 2150 5950 50  0001 C CNN
+F 1 "+3V3" V 2165 6228 50  0000 L CNN
+F 2 "" H 2150 6100 50  0001 C CNN
+F 3 "" H 2150 6100 50  0001 C CNN
+	1    2150 6100
 	0    1    1    0   
 $EndComp
 Wire Wire Line
-	800  7600 1100 7600
+	1850 6100 2150 6100
 Wire Wire Line
-	1800 6550 2300 6550
+	2200 6800 1700 6800
 Wire Wire Line
-	1800 6650 2300 6650
+	2200 6900 1700 6900
 Wire Wire Line
-	1800 6750 2300 6750
+	2200 7000 1700 7000
 Wire Wire Line
-	1800 6850 2300 6850
+	2200 7100 1700 7100
 Wire Wire Line
-	2000 6950 2300 6950
+	2000 7200 1700 7200
 Wire Wire Line
-	2000 7050 2300 7050
+	2000 7300 1700 7300
 Wire Wire Line
 	7250 1800 7700 1800
 $Comp
@@ -1589,9 +1457,120 @@ U 1 1 5C8A0A63
 P 8150 6050
 F 0 "#LOGO1" H 8150 6550 50  0001 C CNN
 F 1 "Logo_Open_Hardware_Large" H 8150 5650 50  0001 C CNN
-F 2 "" H 8150 6050 50  0001 C CNN
+F 2 "Symbol:OSHW-Logo_5.7x6mm_SilkScreen" H 8150 6050 50  0001 C CNN
 F 3 "~" H 8150 6050 50  0001 C CNN
 	1    8150 6050
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_02x06_Odd_Even J4
+U 1 1 61A8A50C
+P 1400 7000
+F 0 "J4" H 1450 7417 50  0000 C CNN
+F 1 "PMOD" H 1450 7326 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_2x06_P2.54mm_Horizontal" H 1400 7000 50  0001 C CNN
+F 3 "~" H 1400 7000 50  0001 C CNN
+	1    1400 7000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3650 2400 3850 2400
+Text Label 3650 2100 0    50   ~ 0
+CLK
+Wire Wire Line
+	3650 2200 3850 2200
+NoConn ~ 3850 2300
+Wire Wire Line
+	9250 5350 9450 5350
+$Comp
+L Device:Crystal_Small Y1
+U 1 1 61AE7CAC
+P 9050 4800
+F 0 "Y1" V 9004 4888 50  0000 L CNN
+F 1 "32768" V 9095 4888 50  0000 L CNN
+F 2 "Crystal:Crystal_C38-LF_D3.0mm_L8.0mm_Horizontal" H 9050 4800 50  0001 C CNN
+F 3 "~" H 9050 4800 50  0001 C CNN
+	1    9050 4800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9050 4650 9050 4700
+Wire Wire Line
+	9050 4900 9050 4950
+Connection ~ 9050 4950
+$Comp
+L Oscillator:XO53 X1
+U 1 1 61C45C74
+P 6400 6100
+F 0 "X1" H 6744 6146 50  0000 L CNN
+F 1 "24MHz" H 6744 6055 50  0000 L CNN
+F 2 "Oscillator:Oscillator_SMD_EuroQuartz_XO53-4Pin_5.0x3.2mm" H 7100 5750 50  0001 C CNN
+F 3 "http://cdn-reichelt.de/documents/datenblatt/B400/XO53.pdf" H 6300 6100 50  0001 C CNN
+	1    6400 6100
+	1    0    0    -1  
+$EndComp
+Wire Bus Line
+	5400 4900 5400 7900
+Text Notes 5400 5200 0    200  ~ 40
+Clock
+$Comp
+L Device:C_Small C16
+U 1 1 61C54A7F
+P 5750 6450
+F 0 "C16" H 5842 6496 50  0000 L CNN
+F 1 "0.1uF" H 5842 6405 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 5750 6450 50  0001 C CNN
+F 3 "~" H 5750 6450 50  0001 C CNN
+	1    5750 6450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0127
+U 1 1 61C559F8
+P 6400 6850
+F 0 "#PWR0127" H 6400 6600 50  0001 C CNN
+F 1 "GND" H 6405 6677 50  0000 C CNN
+F 2 "" H 6400 6850 50  0001 C CNN
+F 3 "" H 6400 6850 50  0001 C CNN
+	1    6400 6850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 6550 5750 6650
+Wire Wire Line
+	5750 6650 6400 6650
+Wire Wire Line
+	6400 6650 6400 6850
+Wire Wire Line
+	6400 6400 6400 6650
+Connection ~ 6400 6650
+Wire Wire Line
+	5750 6350 5750 6100
+Wire Wire Line
+	5750 6100 6100 6100
+$Comp
+L power:+3V3 #PWR0128
+U 1 1 61C8A4A9
+P 6400 5550
+F 0 "#PWR0128" H 6400 5400 50  0001 C CNN
+F 1 "+3V3" H 6415 5723 50  0000 C CNN
+F 2 "" H 6400 5550 50  0001 C CNN
+F 3 "" H 6400 5550 50  0001 C CNN
+	1    6400 5550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5750 6100 5750 5650
+Wire Wire Line
+	5750 5650 6400 5650
+Wire Wire Line
+	6400 5650 6400 5800
+Connection ~ 5750 6100
+Connection ~ 6400 5650
+Wire Wire Line
+	6400 5550 6400 5650
+Text Label 7100 6100 2    50   ~ 0
+CLK
+Wire Wire Line
+	6700 6100 7100 6100
 $EndSCHEMATC
